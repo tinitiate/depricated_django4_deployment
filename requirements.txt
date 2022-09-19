@@ -1,0 +1,7 @@
+django
+django-rest
+djangorestframework
+gunicorn
+djoser
+psycopg2
+whitenoise

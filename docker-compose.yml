@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  
+  app:
+    container_name: syntaxboard_djangoapp
+    build: .
+    # command: python /code/manage.py runserver 0.0.0.0:8000
+    command: gunicorn syntaxboard_django_3.wsgi:application --bind 0.0.0.0:8000 && python manage.py makemigrations && python manage.py migrate
+    volumes:
+      - .:/opt/services/syntaxboard_django_3/src
+    ports:
+      - 8000:8000
+    # networks:
+        # - coding_postgresql_default
+# networks:
+    # coding_postgresql_default:
+      # external: true
