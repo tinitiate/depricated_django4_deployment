@@ -87,9 +87,9 @@ alter table loans.customer_loans_status add constraint customer_loans_custid_fk 
 
 -- 
 -- loans.loan_master
-insert into loans.loan_master (1,'Personal Loan','Personal Loans Short Term');
-insert into loans.loan_master (2,'Home Loan','Home Loans Long Term');
-insert into loans.loan_master (3,'Auto Loan','Auto Loans Medium Term');
+insert into loans.loan_master values (1,'Personal Loan','Personal Loans Short Term');
+insert into loans.loan_master values (2,'Home Loan','Home Loans Long Term');
+insert into loans.loan_master values (3,'Auto Loan','Auto Loans Medium Term');
 
 
 
