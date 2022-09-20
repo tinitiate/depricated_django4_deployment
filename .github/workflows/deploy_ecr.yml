@@ -1,8 +1,17 @@
+##########################################################################
+# DEPLOYMENT FROM GITHUB DOCKER to AWS - ECR
+# * Automatic Deployment trigger pipeline
+# Tinitiate.com (c)
+##########################################################################
+
+# Specify the Name of the Workflow
 name: Deploy to ECR
 
+# Automatic trigger for a workflow
 on:
- 
+ #  events when the workflow is triggered, we can have multiple events. When using multiple events it is either or.
   push:
+ #  the push event gets triggered only for the main branch.
     branches: [ main ]
 
 jobs:
@@ -33,7 +42,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
-        IMAGE_TAG: syntaxboard_django_3_image
+        IMAGE_TAG: syntaxboard_django_3_image_latest
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
