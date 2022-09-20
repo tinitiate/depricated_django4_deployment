@@ -76,9 +76,9 @@ create table loans.customer_loans_status
    ,notes             varchar(2000)
 );
 
-alter table loans.customer_loans add constraint customer_loans_pk primary key (customer_loan_id);
-alter table loans.customer_loans add constraint customer_loans_loanid_fk foreign key(loan_id) references loans.loan_master(loan_id);
-alter table loans.customer_loans add constraint customer_loans_custid_fk foreign key(customer_id) references loans.customer(customer_id);
+alter table loans.customer_loans_status add constraint customer_loans_pk primary key (customer_loan_id);
+alter table loans.customer_loans_status add constraint customer_loans_loanid_fk foreign key(loan_id) references loans.loan_master(loan_id);
+alter table loans.customer_loans_status add constraint customer_loans_custid_fk foreign key(customer_id) references loans.customer(customer_id);
 
 
 -- ----------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ insert into loans.loan_master (3,'Auto Loan','Auto Loans Medium Term');
 
 
 
-COPY persons(loan_rule_id, loan_id, creditscore_limit, creditscore_offset, amount_limit, amount_offset, interest, duration_months)
+COPY loan_rules(loan_rule_id, loan_id, creditscore_limit, creditscore_offset, amount_limit, amount_offset, interest, duration_months)
 FROM 'E:\code\PYTHON_TRAINING\Python_DJANGO\syntaxboard_django_3\loan_rules.csv'
 DELIMITER ','
 CSV HEADER;
