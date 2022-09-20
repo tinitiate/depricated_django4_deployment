@@ -94,7 +94,7 @@ insert into loans.loan_master (3,'Auto Loan','Auto Loans Medium Term');
 
 
 COPY loan_rules(loan_rule_id, loan_id, creditscore_limit, creditscore_offset, amount_limit, amount_offset, interest, duration_months)
-FROM 'E:\code\PYTHON_TRAINING\Python_DJANGO\syntaxboard_django_3\loan_rules.csv'
+FROM 'loan_rules.csv'
 DELIMITER ','
 CSV HEADER;
 
