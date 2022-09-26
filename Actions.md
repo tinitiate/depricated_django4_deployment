@@ -10,6 +10,8 @@
   - Jobs
   - Actions
   - Runners
+
+  ![actions](/actions.png)
   
 ### Workflows
 - We can create workflows by defining them in a YAML file, and they will run when triggered by an event in your repository, 
