@@ -95,28 +95,28 @@ DATABASE_ROUTERS = ['syntaxboard_django_3.dbrouters.AppRouter']
 DATABASES = {
     'default' : {
        'ENGINE': 'django.db.backends.postgresql_psycopg2'
-      ,'NAME':'syntaxboard'
-      ,'USER':'syntaxboard'
-      ,'PASSWORD':'syntaxboard'
-      ,'HOST':'coding_postgresql-database-1'
+      ,'NAME':'tinitiate'
+      ,'USER':'tinitiate'
+      ,'PASSWORD':'tinitiate'
+      ,'HOST':'tinitiate_postgres'
       ,'PORT':'5432'
       ,'OPTIONS': {'options': '-c search_path=public'}
     },
     'SALES' : {
        'ENGINE': 'django.db.backends.postgresql_psycopg2'
-      ,'NAME':'syntaxboard'
-      ,'USER':'syntaxboard'
-      ,'PASSWORD':'syntaxboard'
-      ,'HOST':'coding_postgresql-database-1'
+      ,'NAME':'tinitiate'
+      ,'USER':'tinitiate'
+      ,'PASSWORD':'tinitiate'
+      ,'HOST':'tinitiate_postgres'
       ,'PORT':'5432'
       ,'OPTIONS': {'options': '-c search_path=public'}
     },
     'LOANS' : {
        'ENGINE': 'django.db.backends.postgresql_psycopg2'
-      ,'NAME':'syntaxboard'
-      ,'USER':'syntaxboard'
-      ,'PASSWORD':'syntaxboard'
-      ,'HOST':'coding_postgresql-database-1'
+      ,'NAME':'tinitiate'
+      ,'USER':'tinitiate'
+      ,'PASSWORD':'tinitiate'
+      ,'HOST':'tinitiate_postgres'
       ,'PORT':'5432'
       ,'OPTIONS': {'options': '-c search_path=loans'}
     }
@@ -181,9 +181,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
-   # ,'DEFAULT_PERMISSION_CLASSES': [
-   #      'rest_framework.permissions.IsAuthenticated',
-   #  ]
+   ,'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
 }
 
 # DJOSER CONFIG
