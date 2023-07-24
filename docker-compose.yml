@@ -10,8 +10,8 @@ services:
       - .:/opt/services/syntaxboard_django_3/src
     ports:
       - 8000:8000
-    # networks:
-        # - coding_postgresql_default
-# networks:
-    # coding_postgresql_default:
-      # external: true
+     networks:
+      - tinitiate
+networks:
+  tinitiate:
+    external: true
