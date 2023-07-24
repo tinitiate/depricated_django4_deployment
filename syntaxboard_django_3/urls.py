@@ -8,6 +8,6 @@ urlpatterns = [
     path('models/', include('models.urls')),
     path('webservices/', include('webservices.urls')),
     path('webservices_db/', include('webservices_db.urls')),
-    # path('usermanagement/', include('usermanagement.urls')),
+    path('usermanagement/', include('usermanagement.urls')),
     #path('authentication/', include('authentication.urls')),
 ]
