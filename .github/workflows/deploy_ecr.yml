@@ -6,7 +6,7 @@
 # This is a basic workflow to help you get started with Actions
 
 # Specify the Name of the Workflow
-name: Deploy to ECR 2
+name: Deploy to ECR
 
 
 # Controls when the workflow will run
@@ -50,7 +50,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
-        IMAGE_TAG: syntaxboard_django_3_image_latest
+        IMAGE_TAG: tinitiate_django_image_latest
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
