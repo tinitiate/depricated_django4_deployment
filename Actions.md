@@ -2,6 +2,7 @@
 - Continuous integration and continuous delivery (CI/CD) is automated through GitHub Actions.
 - Along with CI/CD, GitHub Actions allows you to run workflows when other repository events happen. 
   e.g: Adding the labels when new issue is created.
+  ---verify the Credentials.
 
 ## Components
 - GitHub Actions consists of the following components:
