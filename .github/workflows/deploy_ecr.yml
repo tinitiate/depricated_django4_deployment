@@ -48,8 +48,10 @@ jobs:
 
     - name: Build, tag, and push image to Amazon ECR
       env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
+        # ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        # ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
+        ECR_REGISTRY: 352196831952.dkr.ecr.us-east-1.amazonaws.com/
+        ECR_REPOSITORY: tinitiate-django-test
         IMAGE_TAG: django_latest
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
